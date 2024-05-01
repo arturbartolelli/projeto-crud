@@ -7,15 +7,18 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HeaderComponent } from './components/template/header/header.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { FooterComponent } from './components/template/footer/footer.component';
-import { RedDirective } from './directives/red.directive';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatCardModule } from '@angular/material/card';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule} from '@angular/material/list';
+import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
+
+import { MatButtonModule }  from '@angular/material/button'
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule }    from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule}     from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { ForDirective } from './directives/for.directive';
     HomeComponent,
     ProductCrudComponent,
     RedDirective,
-    ForDirective
+    ForDirective,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,8 @@ import { ForDirective } from './directives/for.directive';
     MatToolbarModule,
     MatListModule,
     MatCardModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatButtonModule
   ],
   providers: [
     provideClientHydration(),
