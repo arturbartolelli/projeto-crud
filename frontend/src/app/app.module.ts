@@ -14,11 +14,16 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
 
+import { FormsModule } from '@angular/forms'
+
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule }  from '@angular/material/button'
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule }    from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule}     from '@angular/material/list';
+
 
 import { HttpClientModule } from '@angular/common/http'
 
@@ -42,7 +47,10 @@ import { HttpClientModule } from '@angular/common/http'
     MatCardModule,
     MatSidenavModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [
     provideClientHydration(),

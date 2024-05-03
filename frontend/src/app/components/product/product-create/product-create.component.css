@@ -1,0 +1,21 @@
+.title {
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-card {
+    padding: 20px
+}
+
+button {
+    margin-right: 15px;
+}
+
+mat-form-field {
+    width: 250px;
+    border-radius: 20%;
+}
