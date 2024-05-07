@@ -10,22 +10,27 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
 
 import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
 
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-import { MatFormFieldModule } from '@angular/material/form-field'
-import { MatInputModule } from '@angular/material/input'
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule }  from '@angular/material/button'
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule }    from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule}     from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort'
 
 
-import { HttpClientModule } from '@angular/common/http'
+import { ExemploTabelaComponent } from './exemplos/exemplo-tabela/exemplo-tabela.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +42,9 @@ import { HttpClientModule } from '@angular/common/http'
     ProductCrudComponent,
     RedDirective,
     ForDirective,
-    ProductCreateComponent
+    ProductCreateComponent,
+    ProductReadComponent,
+    ExemploTabelaComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +57,10 @@ import { HttpClientModule } from '@angular/common/http'
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [
     provideClientHydration(),
